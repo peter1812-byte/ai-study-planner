@@ -1,19 +1,15 @@
+import json
+
 def generate_plan(goal, hours_per_week):
     goal = goal.lower()
 
-    if goal == "ai":
-        topics = [
-            "Python basics",
-            "Data analysis with Python",
-            "Introduction to machine learning"
-        ]
-    else:
-        topics = [
-            "Python basics",
-            "Data structures",
-            "Basic software design"
-        ]
+    with open("topics.json", "r") as f:
+        topics_data = json.load(f)
 
+    if goal not in topics_data:
+        return {}
+
+    topics = topics_data[goal]
     plan = {}
 
     for i, topic in enumerate(topics, start=1):
