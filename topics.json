@@ -1,0 +1,12 @@
+{
+  "ai": [
+    "Python basics",
+    "Data analysis with Python",
+    "Introduction to machine learning"
+  ],
+  "software engineering": [
+    "Python basics",
+    "Data structures",
+    "Basic software design"
+  ]
+}
